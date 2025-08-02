@@ -1,6 +1,7 @@
 import { NestFastifyApplication } from '@nestjs/platform-fastify';
-import { Logger } from 'nestjs-pino';
 import { ConfigService } from '@nestjs/config';
+import { Logger } from 'nestjs-pino';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { EnvironmentVariables } from '@config/types';
 
 export class BootstrapService {
@@ -17,5 +18,16 @@ export class BootstrapService {
     const url = await app.getUrl();
 
     logger.log(`Server ${appName} is running on: ${url}`);
+  }
+
+  static setupSwagger(app: NestFastifyApplication): void {
+    const options = new DocumentBuilder()
+      .setTitle('NestJS Screaming Architecture')
+      .setDescription('API documentation for the NestJS Screaming Architecture')
+      .setVersion('1.0')
+      .build();
+    const document = SwaggerModule.createDocument(app, options);
+
+    SwaggerModule.setup('swagger', app, document);
   }
 }

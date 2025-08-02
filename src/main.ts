@@ -5,10 +5,10 @@ import {
   FastifyAdapter,
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
+import { Logger } from 'nestjs-pino';
 import { AppModule } from './app.module';
 import { BootstrapService } from '@config/services';
 import { EnvironmentVariables } from '@config/types';
-import { Logger } from 'nestjs-pino';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -26,6 +26,7 @@ async function bootstrap() {
   const logger = app.get(Logger);
   app.useLogger(logger);
 
+  BootstrapService.setupSwagger(app);
   await BootstrapService.startServer(app, logger, configService);
 }
 
