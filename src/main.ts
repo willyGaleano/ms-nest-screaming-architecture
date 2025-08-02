@@ -7,6 +7,7 @@ import {
 import { AppModule } from './app.module';
 import { BootstrapService } from '@config/services';
 import { EnvironmentVariables } from '@config/types';
+import { Logger } from 'nestjs-pino';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -18,7 +19,10 @@ async function bootstrap() {
   const configService =
     app.get<ConfigService<EnvironmentVariables>>(ConfigService);
 
-  await BootstrapService.startServer(app, configService);
+  const logger = app.get(Logger);
+  app.useLogger(logger);
+
+  await BootstrapService.startServer(app, logger, configService);
 }
 
 void bootstrap();

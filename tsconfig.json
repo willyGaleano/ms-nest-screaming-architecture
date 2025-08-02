@@ -14,7 +14,9 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "@config/*": ["./src/infrastructure/config/*"]
+      "@common/*": ["./src/common/*"],
+      "@config/*": ["./src/infrastructure/config/*"],
+      "@logger/*": ["./src/infrastructure/logger/*"]
     },
     "strictNullChecks": true,
     "noImplicitAny": false,
