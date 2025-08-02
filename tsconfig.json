@@ -13,6 +13,9 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "baseUrl": "./",
+    "paths": {
+      "@config/*": ["./src/infrastructure/config/*"]
+    },
     "strictNullChecks": true,
     "noImplicitAny": false,
     "strictBindCallApply": true,

@@ -1,9 +1,12 @@
 import { NestFactory } from '@nestjs/core';
+import { ConfigService } from '@nestjs/config';
 import {
   FastifyAdapter,
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
 import { AppModule } from './app.module';
+import { BootstrapService } from '@config/services';
+import { EnvironmentVariables } from '@config/types';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
@@ -11,6 +14,11 @@ async function bootstrap() {
     new FastifyAdapter(),
     { bufferLogs: true },
   );
-  await app.listen(process.env.PORT ?? 3000, '0.0.0.0');
+
+  const configService =
+    app.get<ConfigService<EnvironmentVariables>>(ConfigService);
+
+  await BootstrapService.startServer(app, configService);
 }
+
 void bootstrap();
