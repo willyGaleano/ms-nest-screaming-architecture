@@ -1,8 +1,8 @@
 {
   "name": "ms-nest-screaming-architecture",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "NestJS template for a screaming architecture project",
+  "author": "willyGaleano",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
