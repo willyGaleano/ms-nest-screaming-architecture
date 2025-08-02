@@ -14,6 +14,7 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
+      "@health/*": ["./src/apps/health/*"],
       "@common/*": ["./src/common/*"],
       "@config/*": ["./src/infrastructure/config/*"],
       "@context-store/*": ["./src/infrastructure/context-store/*"],
