@@ -6,7 +6,14 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    ignores: ['eslint.config.mjs'],
+    ignores: [
+      'dist',
+      'node_modules',
+      'coverage',
+      'build',
+      'eslint.config.mjs',
+      'commitlint.config.mjs',
+    ],
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
@@ -30,14 +37,5 @@ export default tseslint.config(
       '@typescript-eslint/no-floating-promises': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'warn',
     },
-  },
-  {
-    ignores: [
-      'dist',
-      'node_modules',
-      'coverage',
-      'build',
-      'commitlint.config.js',
-    ],
   },
 );
