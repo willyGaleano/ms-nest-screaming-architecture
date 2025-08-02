@@ -1,7 +1,9 @@
+import { APP_INTERCEPTOR } from '@nestjs/core';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { LoggerModule } from 'nestjs-pino';
 import { LoggerService } from '@logger/services';
+import { LoggerBindingInterceptor } from '@logger/interceptors';
 import { EnvironmentVariables } from '@config/types';
 
 @Module({
@@ -13,6 +15,12 @@ import { EnvironmentVariables } from '@config/types';
       },
       inject: [ConfigService],
     }),
+  ],
+  providers: [
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: LoggerBindingInterceptor,
+    },
   ],
 })
 export class LoggerAppModule {}

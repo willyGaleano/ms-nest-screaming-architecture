@@ -16,6 +16,7 @@
     "paths": {
       "@common/*": ["./src/common/*"],
       "@config/*": ["./src/infrastructure/config/*"],
+      "@context-store/*": ["./src/infrastructure/context-store/*"],
       "@logger/*": ["./src/infrastructure/logger/*"]
     },
     "strictNullChecks": true,
