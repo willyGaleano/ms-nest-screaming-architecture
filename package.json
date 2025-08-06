@@ -30,6 +30,7 @@
     "@nestjs/platform-fastify": "^11.1.5",
     "@nestjs/swagger": "^11.2.0",
     "@nestjs/terminus": "^11.0.0",
+    "@nestjs/throttler": "^6.4.0",
     "axios": "^1.11.0",
     "nestjs-cls": "^6.0.1",
     "nestjs-pino": "^4.4.0",

@@ -7,6 +7,7 @@ import {
 } from '@nestjs/platform-fastify';
 import { Logger } from 'nestjs-pino';
 import { AppModule } from './app.module';
+import { CorsService } from '@security/cors/services';
 import { BootstrapService } from '@config/services';
 import { EnvironmentVariables } from '@config/types';
 
@@ -19,6 +20,8 @@ async function bootstrap() {
 
   const configService =
     app.get<ConfigService<EnvironmentVariables>>(ConfigService);
+
+  await CorsService.registerFastifyCors(app, configService);
 
   app.enableVersioning({ type: VersioningType.URI });
   app.enableShutdownHooks();

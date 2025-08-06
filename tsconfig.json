@@ -20,7 +20,8 @@
       "@context-store/*": ["./src/infrastructure/context-store/*"],
       "@logger/*": ["./src/infrastructure/logger/*"],
       "@cache/*": ["./src/infrastructure/cache/*"],
-      "@http-client/*": ["./src/infrastructure/http-client/*"]
+      "@http-client/*": ["./src/infrastructure/http-client/*"],
+      "@security/*": ["./src/infrastructure/security/*"]
     },
     "strictNullChecks": true,
     "noImplicitAny": false,
