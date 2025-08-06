@@ -1,0 +1,19 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": "src",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "^@health/(.*)$": "<rootDir>/apps/health/$1",
+    "^@common/(.*)$": "<rootDir>/common/$1",
+    "^@config/(.*)$": "<rootDir>/infrastructure/config/$1",
+    "^@context-store/(.*)$": "<rootDir>/infrastructure/context-store/$1",
+    "^@logger/(.*)$": "<rootDir>/infrastructure/logger/$1",
+    "^@cache/(.*)$": "<rootDir>/infrastructure/cache/$1",
+    "^@http-client/(.*)$": "<rootDir>/infrastructure/http-client/$1",
+    "^@security/(.*)$": "<rootDir>/infrastructure/security/$1"
+  }
+}

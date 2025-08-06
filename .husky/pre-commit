@@ -3,4 +3,7 @@ echo "🔍 Running pre-commit checks..."
 echo "📝 Linting code..."
 npx lint-staged
 
+echo "🧪 Running tests..."
+npm run test
+
 echo "✅ Pre-commit checks passed!"
