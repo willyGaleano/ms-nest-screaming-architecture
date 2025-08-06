@@ -3,6 +3,7 @@ import { ConfigAppModule } from '@config/config.module';
 import { ContextStoreModule } from '@context-store/context-store.module';
 import { LoggerAppModule } from '@logger/logger.module';
 import { CacheModule } from '@cache/cache.module';
+import { HttpClientModule } from '@http-client/http-client.module';
 import { HealthModule } from '@health/health.module';
 
 @Module({
@@ -11,6 +12,7 @@ import { HealthModule } from '@health/health.module';
     ContextStoreModule,
     LoggerAppModule,
     CacheModule,
+    HttpClientModule,
     HealthModule,
   ],
 })

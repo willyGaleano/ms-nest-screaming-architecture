@@ -19,7 +19,8 @@
       "@config/*": ["./src/infrastructure/config/*"],
       "@context-store/*": ["./src/infrastructure/context-store/*"],
       "@logger/*": ["./src/infrastructure/logger/*"],
-      "@cache/*": ["./src/infrastructure/cache/*"]
+      "@cache/*": ["./src/infrastructure/cache/*"],
+      "@http-client/*": ["./src/infrastructure/http-client/*"]
     },
     "strictNullChecks": true,
     "noImplicitAny": false,
