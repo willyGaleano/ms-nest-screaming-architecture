@@ -32,6 +32,7 @@
     "nestjs-cls": "^6.0.1",
     "nestjs-pino": "^4.4.0",
     "pino-http": "^10.5.0",
+    "redis": "^5.8.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
     "uuid": "^11.1.0",
