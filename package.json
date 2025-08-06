@@ -17,7 +17,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "test:e2e": "jest --config ./jest-e2e.json",
     "prepare": "husky",
     "commit": "cz"
   },
@@ -49,6 +49,9 @@
     "@nestjs/cli": "^11.0.0",
     "@nestjs/schematics": "^11.0.0",
     "@nestjs/testing": "^11.0.1",
+    "@suites/di.nestjs": "^3.0.1",
+    "@suites/doubles.jest": "^3.0.1",
+    "@suites/unit": "^3.0.1",
     "@swc/cli": "^0.6.0",
     "@swc/core": "^1.10.7",
     "@types/jest": "^29.5.14",
@@ -81,7 +84,7 @@
       "ts"
     ],
     "rootDir": "src",
-    "testRegex": ".*\\.spec\\.ts$",
+    "testRegex": "(.*\\.spec)\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
@@ -89,7 +92,18 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^@root/(.*)$": "<rootDir>/$1",
+      "^@health/(.*)$": "<rootDir>/apps/health/$1",
+      "^@common/(.*)$": "<rootDir>/common/$1",
+      "^@config/(.*)$": "<rootDir>/infrastructure/config/$1",
+      "^@context-store/(.*)$": "<rootDir>/infrastructure/context-store/$1",
+      "^@logger/(.*)$": "<rootDir>/infrastructure/logger/$1",
+      "^@cache/(.*)$": "<rootDir>/infrastructure/cache/$1",
+      "^@http-client/(.*)$": "<rootDir>/infrastructure/http-client/$1",
+      "^@security/(.*)$": "<rootDir>/infrastructure/security/$1"
+    }
   },
   "config": {
     "commitizen": {
