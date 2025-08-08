@@ -4,6 +4,7 @@ import { ContextStoreModule } from '@context-store/context-store.module';
 import { LoggerAppModule } from '@logger/logger.module';
 import { SecurityModule } from '@security/security.module';
 import { CacheModule } from '@cache/cache.module';
+import { DbModule } from '@db/db.module';
 import { HttpClientModule } from '@http-client/http-client.module';
 import { HealthModule } from '@health/health.module';
 
@@ -14,6 +15,7 @@ import { HealthModule } from '@health/health.module';
     LoggerAppModule,
     SecurityModule,
     CacheModule,
+    DbModule,
     HttpClientModule,
     HealthModule,
   ],
