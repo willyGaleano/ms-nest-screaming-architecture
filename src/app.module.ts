@@ -6,6 +6,7 @@ import { SecurityModule } from '@security/security.module';
 import { CacheModule } from '@cache/cache.module';
 import { DbModule } from '@db/db.module';
 import { HttpClientModule } from '@http-client/http-client.module';
+import { KafkaModule } from '@broker/kafka/kafka.module';
 import { HealthModule } from '@health/health.module';
 
 @Module({
@@ -17,6 +18,7 @@ import { HealthModule } from '@health/health.module';
     CacheModule,
     DbModule,
     HttpClientModule,
+    KafkaModule,
     HealthModule,
   ],
 })

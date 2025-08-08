@@ -31,12 +31,14 @@
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
+    "@nestjs/microservices": "^11.1.6",
     "@nestjs/platform-fastify": "^11.1.5",
     "@nestjs/swagger": "^11.2.0",
     "@nestjs/terminus": "^11.0.0",
     "@nestjs/throttler": "^6.4.0",
     "@prisma/client": "^6.13.0",
     "axios": "^1.11.0",
+    "kafkajs": "^2.2.4",
     "nestjs-cls": "^6.0.1",
     "nestjs-pino": "^4.4.0",
     "pino-http": "^10.5.0",
@@ -109,7 +111,8 @@
       "^@cache/(.*)$": "<rootDir>/infrastructure/cache/$1",
       "^@db/(.*)$": "<rootDir>/infrastructure/db/$1",
       "^@http-client/(.*)$": "<rootDir>/infrastructure/http-client/$1",
-      "^@security/(.*)$": "<rootDir>/infrastructure/security/$1"
+      "^@security/(.*)$": "<rootDir>/infrastructure/security/$1",
+      "^@broker/(.*)$": "<rootDir>/infrastructure/broker/$1"
     }
   },
   "config": {

@@ -16,6 +16,7 @@
     "^@cache/(.*)$": "<rootDir>/infrastructure/cache/$1",
     "^@db/(.*)$": "<rootDir>/infrastructure/db/$1",
     "^@http-client/(.*)$": "<rootDir>/infrastructure/http-client/$1",
-    "^@security/(.*)$": "<rootDir>/infrastructure/security/$1"
+    "^@security/(.*)$": "<rootDir>/infrastructure/security/$1",
+    "^@broker/(.*)$": "<rootDir>/infrastructure/broker/$1"
   }
 }
