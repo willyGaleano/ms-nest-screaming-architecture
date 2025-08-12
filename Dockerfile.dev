@@ -11,10 +11,13 @@ WORKDIR /usr/src/app
 ENV NODE_ENV=development
 ENV PORT=3000
 
+# Copy package files first for better caching
 COPY --chown=node:node package.json package-lock.json ./
 
-RUN npm ci
+# Install only dependencies (including dev dependencies for development)
+RUN npm ci --include=dev
 
+# Copy source code (excluding files in .dockerignore)
 COPY --chown=node:node . .
 
 RUN npx prisma generate

@@ -1,0 +1,75 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Git
+.git/
+.gitignore
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Build outputs
+dist/
+build/
+
+# Docker files
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Documentation
+README.md
+*.md
+
+# Test files
+test/
+**/*.spec.ts
+**/*.test.ts
+jest*.json
+
+# ESLint and Prettier
+.eslintrc*
+.prettierrc*
+eslint.config.*
+
+# Commitlint and Husky
+.husky/
+commitlint.config.*
+
+# TypeScript config (keep tsconfig.json and tsconfig.build.json)
+# tsconfig.json will be needed for development
+
+# Generated files that will be recreated
+generated/
+
+# Misc
+*.tgz
+*.tar.gz
