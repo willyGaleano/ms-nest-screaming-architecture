@@ -94,6 +94,22 @@
       "json",
       "ts"
     ],
+    "coveragePathIgnorePatterns": [
+      ".module.ts$",
+      "main.ts$",
+      ".mock.ts$",
+      ".dto.ts$",
+      ".enum.ts$",
+      ".constant.ts$",
+      ".type.ts$",
+      ".interface.ts$",
+      ".abstract.ts$",
+      "index.ts$",
+      ".js$",
+      ".spec.ts$",
+      ".command.ts$",
+      ".query.ts$"
+    ],
     "rootDir": "src",
     "testRegex": "(.*\\.spec)\\.ts$",
     "transform": {

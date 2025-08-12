@@ -10,7 +10,7 @@ import request from 'supertest';
 import { ConfigModule } from '@nestjs/config';
 import { TerminusModule } from '@nestjs/terminus';
 import { HealthModule } from '@health/health.module';
-import { mockE2EEnvironmentVariables } from '@common/test/_mocks_';
+import { mockE2EEnvironmentVariables } from '@root/src/common/tests/_mocks_';
 
 describe('Health E2E Tests', () => {
   let app: NestFastifyApplication;
