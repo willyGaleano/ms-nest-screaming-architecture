@@ -17,6 +17,7 @@
     "paths": {
       "@root/*": ["./*"],
       "@health/*": ["./src/apps/health/*"],
+      "@notification/*": ["./src/apps/notification/*"],
       "@common/*": ["./src/common/*"],
       "@config/*": ["./src/infrastructure/config/*"],
       "@context-store/*": ["./src/infrastructure/context-store/*"],
@@ -25,7 +26,8 @@
       "@db/*": ["./src/infrastructure/db/*"],
       "@http-client/*": ["./src/infrastructure/http-client/*"],
       "@security/*": ["./src/infrastructure/security/*"],
-      "@broker/*": ["./src/infrastructure/broker/*"]
+      "@broker/*": ["./src/infrastructure/broker/*"],
+      "@third-party/*": ["./src/infrastructure/third-party/*"]
     },
     "strictNullChecks": true,
     "noImplicitAny": false,
