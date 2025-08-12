@@ -22,7 +22,11 @@ export class GlobalExceptionFilter implements ExceptionFilter {
 
     this.logException(errorResponse);
 
-    response.status(errorResponse.statusCode).send(errorResponse);
+    response.status(errorResponse.statusCode).send({
+      statusCode: errorResponse.statusCode,
+      message: errorResponse.message,
+      errorCode: errorResponse.errorCode,
+    });
   }
 
   private buildErrorResponse(exception: unknown): ErrorResponse {
@@ -69,8 +73,10 @@ export class GlobalExceptionFilter implements ExceptionFilter {
   private genericErrorBuildResponse(exception: Error): ErrorResponse {
     return {
       statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
-      message: exception.message || 'Internal server error',
+      message: 'Occurred an unexpected error',
+      details: `${exception.name} - ${exception.message}`,
       cause: exception.cause,
+      stack: exception.stack,
     };
   }
 
@@ -102,14 +108,13 @@ export class GlobalExceptionFilter implements ExceptionFilter {
   }
 
   private logException(errorResponse: ErrorResponse): void {
-    const { statusCode, message, errorCode, cause } = errorResponse;
+    const { message, errorCode, ...restResponse } = errorResponse;
 
     if (!errorCode)
       this.logger.error({
         msg: message,
         errorInfo: {
-          statusCode,
-          ...(cause !== undefined && { cause }),
+          ...restResponse,
         },
       });
   }

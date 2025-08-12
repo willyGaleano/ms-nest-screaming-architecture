@@ -18,4 +18,6 @@ export type ErrorResponse = {
   statusCode: number;
   errorCode?: string;
   cause?: unknown;
+  details?: string;
+  stack?: string;
 };
