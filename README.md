@@ -23,6 +23,7 @@
 - [🔧 Infrastructure Modules](#-infrastructure-modules)
 - [📱 Business Domain Modules](#-business-domain-modules)
 - [🛠️ Technologies Used](#️-technologies-used)
+- [📄 License](#-license)
 - [📧 Author](#-author)
 
 ---
@@ -635,6 +636,21 @@ flowchart TD
 
 - **Mailtrap**: Email delivery service
 - **Axios**: HTTP client library
+
+## 📄 License
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
+
+**You are free to:**
+
+- ✅ Use this template for educational and non-commercial purposes
+- ✅ Modify and adapt the code to your needs
+- ✅ Share and redistribute the template
+
+**Under the following conditions:**
+
+- 📝 **Attribution** - You must give appropriate credit to the original author
+- 🚫 **NonCommercial** - You may not use this material for commercial purposes
 
 ## 📧 Author
 
