@@ -8,6 +8,7 @@ import {
 import { Logger } from 'nestjs-pino';
 import { AppModule } from '@root/src/app.module';
 import { CorsService } from '@security/cors/services';
+import { GlobalExceptionFilter } from '@common/filters';
 import { BootstrapService } from '@config/services';
 import { EnvironmentVariables } from '@config/types';
 
@@ -19,10 +20,10 @@ async function bootstrap() {
   );
   const configService =
     app.get<ConfigService<EnvironmentVariables>>(ConfigService);
-  const logger = app.get(Logger);
 
   await CorsService.registerFastifyCors(app, configService);
 
+  app.useGlobalFilters(new GlobalExceptionFilter());
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
@@ -31,6 +32,7 @@ async function bootstrap() {
   );
   app.enableVersioning({ type: VersioningType.URI });
   app.enableShutdownHooks();
+  const logger = app.get(Logger);
   app.useLogger(logger);
 
   BootstrapService.setupSwagger(app);

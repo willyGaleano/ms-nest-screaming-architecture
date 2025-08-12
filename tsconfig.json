@@ -17,6 +17,7 @@
     "paths": {
       "@root/*": ["./*"],
       "@health/*": ["./src/apps/health/*"],
+      "@user/*": ["./src/apps/user/*"],
       "@notification/*": ["./src/apps/notification/*"],
       "@common/*": ["./src/common/*"],
       "@config/*": ["./src/infrastructure/config/*"],

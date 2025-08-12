@@ -9,6 +9,7 @@
   "moduleNameMapper": {
     "^@root/(.*)$": "<rootDir>/../$1",
     "^@health/(.*)$": "<rootDir>/apps/health/$1",
+    "^@user/(.*)$": "<rootDir>/apps/user/$1",
     "^@notification/(.*)$": "<rootDir>/apps/notification/$1",
     "^@common/(.*)$": "<rootDir>/common/$1",
     "^@config/(.*)$": "<rootDir>/infrastructure/config/$1",

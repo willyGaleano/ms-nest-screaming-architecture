@@ -8,6 +8,7 @@ import { HTTP_CLIENT_ENV_VARS } from '@http-client/constants';
 import { KAFKA_ENV_VARS } from '@broker/kafka/constants';
 import { EMAIL_PROVIDER_ENV_VARS } from '@third-party/email-provider/constants';
 import { HEALTH_ENV_VARS } from '@health/constants';
+import { USER_ENV_VARS } from '@user/constants';
 
 export const CONFIG_BASE_ENV_VARS = z
   .object({
@@ -29,5 +30,6 @@ export const ENVIRONMENT_VARIABLES = z
     ...KAFKA_ENV_VARS.shape,
     ...EMAIL_PROVIDER_ENV_VARS.shape,
     ...HEALTH_ENV_VARS.shape,
+    ...USER_ENV_VARS.shape,
   })
   .describe('Environment Variables');

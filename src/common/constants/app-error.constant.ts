@@ -1,0 +1,1 @@
+export const FUNCTIONAL_ERROR_PREFIX = 'FUNC_ERROR_';

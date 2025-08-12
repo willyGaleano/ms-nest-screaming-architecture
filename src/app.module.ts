@@ -10,6 +10,7 @@ import { KafkaModule } from '@broker/kafka/kafka.module';
 import { ThirdPartyModule } from '@third-party/third-party.module';
 import { HealthModule } from '@health/health.module';
 import { NotificationModule } from '@notification/notification.module';
+import { UserModule } from '@user/user.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { NotificationModule } from '@notification/notification.module';
     ThirdPartyModule,
     HealthModule,
     NotificationModule,
+    UserModule,
   ],
 })
 export class AppModule {}
